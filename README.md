@@ -1,51 +1,51 @@
-# 🎓 QuizGen IA - Générateur de Quiz Pédagogiques
+# 🎓 QuizGen AI - Educational Quiz Generator
 
 ## Description
 
-QuizGen IA est une application web qui génère automatiquement des quiz pédagogiques à partir de documents PDF ou de texte brut. 
-L'application utilise **LLaMA 4** (via Groq API) pour générer des questions de qualité adaptées au niveau de difficulté choisi.
+QuizGen AI is a web application that automatically generates educational quizzes from PDF documents or raw text.
+The application uses **LLaMA 4** (via the Groq API) to generate high-quality questions tailored to a selected difficulty level.
 
-### Fonctionnalités
+### Features
 
--  **Extraction de texte** depuis PDF et DOCX
--  **Génération de questions** (QCM, Vrai/Faux, Question ouverte)
--  **3 niveaux de difficulté** (Facile, Moyen, Difficile)
--  **Mode examen** pour cacher les réponses
--  **Métriques de performance** (Précision, Rappel, F1-Score)
--  **Historique des quiz** sauvegardé localement
--  **Export CSV/JSON** des quiz
+-  **Text extraction** from PDF and DOCX files
+-  **Question generation** (Multiple-choice, True/False, Open-ended)
+-  **3 difficulty levels** (Easy, Medium, Hard)
+-  **Exam mode** (hides answers)
+-  **Performance metrics** (Precision, Recall, F1-Score)
+-  **Local quiz history** storage
+-  **Export options** (CSV/JSON)
 
-### Architecture NLP
+### NLP Architecture
 
-- **Modèle**: LLaMA 4 (17B paramètres)
-- **Architecture**: Transformer auto-régressif
+- **Model**: LLaMA 4 (17B parameters)
+- **Architecture**: Auto-regressive Transformer
 - **Fine-tuning**: Instruction-tuned
-- **API**: Groq (inférence optimisée)
+- **API**: Groq (optimized inference)
 
 ## 🚀 Installation
 
-### Prérequis
+### Prerequisites
 
-- Python 3.10 ou supérieur
-- Clé API Groq ([Obtenir gratuitement](https://console.groq.com))
+- Python 3.10 or higher
+- Groq API key ([Get one for free](https://console.groq.com))
 
-### Installation locale
+### Local Installation
 
 ```bash
-# 1. Cloner le repository
-git clone https://github.com/votre-username/quizgen-ia.git
+# 1. Clone the repository
+git clone https://github.com/your-username/quizgen-ia.git
 cd quizgen-ia
 
-# 2. Créer un environnement virtuel
+# 2. Create a virtual environment
 python -m venv venv
-source venv/bin/activate  # Sur Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# 3. Installer les dépendances
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Configurer la clé API
+# 4. Configure the API key
 cp .env.example .env
-# Éditer .env et ajouter votre clé GROQ_API_KEY
+# Edit .env and add your GROQ_API_KEY
 
-# 5. Lancer l'application
+# 5. Launch the application
 streamlit run app.py
